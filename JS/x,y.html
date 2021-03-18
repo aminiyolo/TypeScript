@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X, Y</title>
+</head>
+<style>
+    * {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 10px;
+    }
+    body {
+        background-color: lightgray;
+    }
+    div{
+        background-color: lightsalmon;
+    }
+    .sBox {
+        background-color: springgreen;
+    }
+</style>
+<body>
+    <div class=></div>
+    <div class=></div>
+    <div class=></div>
+    <div class=></div>
+    <div class=></div>
+    <div class=></div>
+    <div class=></div>
+    <div class=></div>
+    <div class=></div>
+    <div class=></div>
+    <div class=></div>
+    <div class=></div>
+    <div class="sBox"></div>
+    <div class=></div>
+    <div class=></div>
+    <div class=></div>
+    <div class=></div>
+    <div class=></div>
+    <div class=></div>
+    <div class=></div>
+    <script>
+        const target = document.querySelector(".sBox");
+        function onClick(e) {
+            console.log(e.target.getBoundingClientRect());
+            console.log(`client: ${e.clientX}, ${e.clientY}`);
+            console.log(`page: ${e.pageX} ${e.pageY}`);
+        }
+        target.addEventListener("click", (e) => {
+            onClick(e);
+        } )
+    </script>
+</body>
+</html>

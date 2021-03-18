@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X, Y</title>
+</head>
+<style>
+    * {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 10px;
+    }
+    body {
+        background-color: lightgray;
+    }
+    div{
+        background-color: lightsalmon;
+    }
+    .sBox {
+        background-color: springgreen;
+    }
+    button {
+        position: fixed;
+        top: 20px;
+    }
+    .scrollUp {
+        right: 285px;
+    }
+    .scrollDown {
+        right: 160px;
+    }
+    .pickSbox {
+        right: 35px;
+    }
+</style>
+<body>
+    <div class=></div>
+    <div class=></div>
+    <div class=></div>
+    <div class=></div>
+    <div class=></div>
+    <div class=></div>
+    <div class=></div>
+    <div class=></div>
+    <div class=></div>
+    <div class=></div>
+    <div class=></div>
+    <div class=></div>
+    <div class="sBox"></div>
+    <div class=></div>
+    <div class=></div>
+    <div class=></div>
+    <div class=></div>
+    <div class=></div>
+    <div class=></div>
+    <div class=></div>
+    <button class="scrollUp">Scroll by 100px(y)</button>
+    <button class="scrollDown">Scroll to 100px(y)</button>
+    <button class="pickSbox">Scroll into special</button>
+    <script>
+        const sBox = document.querySelector(".sBox");
+        const up = document.querySelector('.scrollUp');
+        const down = document.querySelector('.scrollDown');
+        const pick = document.querySelector('.pickSbox');
+        function onCilck__scrollUP() {
+            window.scrollBy(0, -200);
+        }
+        function onClick__scrollDown() {
+            window.scrollBy(0, 200)
+            // window.scrollTo(0, 800);
+            };
+        // scrollTo => y가 800인 값으로 이동한다.
+        function moveToSbox() {
+            sBox.scrollIntoView({behavior:"smooth"});
+        }
+        up.addEventListener("click", onCilck__scrollUP);
+        down.addEventListener("click", onClick__scrollDown)
+        pick.addEventListener("click", moveToSbox);
+    </script>
+</body>
+</html>
